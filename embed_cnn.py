@@ -73,7 +73,7 @@ def cnn_embedding(args, h, data_file):
 
     xt = _batch_embed(args, model.embedding_net, h.xt, device, char_alphabet=char_alphabet)
     start_time = time.time()
-    xt = []
+    #xt = []
     xb = _batch_embed(args, model.embedding_net, h.xb, device, char_alphabet=char_alphabet)
     embed_time = time.time() - start_time
     xq = _batch_embed(args, model.embedding_net, h.xq, device, char_alphabet=char_alphabet)
