@@ -26,7 +26,8 @@ def train_epoch(args, train_set, device):
     elif args.dataset == "uniref":
         EmbeddingNet = UnirefCNN
     else:
-        EmbeddingNet = MultiLayerCNN
+        #EmbeddingNet = MultiLayerCNN
+        EmbeddingNet = TwoLayerCNN
 
     if args.epochs == 0 and args.dataset != "word":
         EmbeddingNet = RandomCNN
